@@ -11,7 +11,7 @@ export default function Home() {
 
       <main className="flex-grow">
         {/* Hero Section */}
-        <section className="relative w-full aspect-[4/3] md:aspect-[1.6] flex items-center bg-brand-primary overflow-hidden" style={{ marginTop: '-6rem' }}>
+        <section className="relative w-full min-h-[85vh] md:min-h-0 md:aspect-[1.6] flex items-center bg-brand-primary overflow-hidden" style={{ marginTop: '-6rem' }}>
           {/* Background Image */}
           <div className="absolute inset-0 z-0">
             <Image
@@ -23,16 +23,16 @@ export default function Home() {
               priority
             />
             {/* Soft overlay to ensure readability */}
-            <div className="absolute inset-0 bg-black/10 md:bg-transparent md:bg-gradient-to-r md:from-black/40 md:to-transparent" />
+            <div className="absolute inset-0 bg-black/40 md:bg-transparent md:bg-gradient-to-r md:from-black/60 md:to-transparent" />
           </div>
 
           {/* Hero Content */}
-          <div className="relative z-10 max-w-7xl mx-auto px-6 w-full text-white">
-            <div className="max-w-2xl flex flex-col space-y-4">
-              <span className="text-lg md:text-2xl font-semibold tracking-wider text-white/90 drop-shadow-md">
+          <div className="relative z-10 max-w-7xl mx-auto px-6 w-full text-white pt-24 md:pt-0">
+            <div className="max-w-2xl flex flex-col items-center md:items-start space-y-6 text-center md:text-left mx-auto md:mx-0">
+              <span className="text-xl md:text-3xl font-semibold tracking-wider text-white/90 drop-shadow-md">
                 The &quot;African Maven&quot; Agency:
               </span>
-              <h1 className="text-4xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-white drop-shadow-lg">
+              <h1 className="text-5xl sm:text-6xl md:text-7xl font-extrabold tracking-tight leading-[1.1] text-white drop-shadow-lg">
                 Dream It, Say It, Done!
               </h1>
             </div>
@@ -99,11 +99,11 @@ export default function Home() {
         </section>
 
         {/* Mission, Vision, Values Section */}
-        <section className="bg-brand-primary py-24 text-white">
+        <section className="bg-brand-primary py-24 text-brand-dark">
           <div className="max-w-7xl mx-auto px-6">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {/* Mission Card */}
-              <div className="bg-[#0b2984] rounded-[2rem] p-6 flex flex-col space-y-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-smooth group cursor-pointer">
+              <div className="bg-[white] rounded-[2rem] p-6 flex flex-col space-y-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-smooth group cursor-pointer">
                 <div className="relative w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden">
                   <Image
                     src="/mission.png"
@@ -123,7 +123,7 @@ export default function Home() {
               </div>
 
               {/* Vision Card */}
-              <div className="bg-[#0b2984] rounded-[2rem] p-6 flex flex-col space-y-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-smooth group cursor-pointer">
+              <div className="bg-[white] rounded-[2rem] p-6 flex flex-col space-y-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-smooth group cursor-pointer">
                 <div className="relative w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden">
                   <Image
                     src="/vision.png"
@@ -143,7 +143,7 @@ export default function Home() {
               </div>
 
               {/* Core Values Card */}
-              <div className="bg-[#0b2984] rounded-[2rem] p-6 flex flex-col space-y-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-smooth group cursor-pointer">
+              <div className="bg-[white] rounded-[2rem] p-6 flex flex-col space-y-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-smooth group cursor-pointer">
                 <div className="relative w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden">
                   <Image
                     src="/ChatGPT Image May 1, 2026, 03_18_50 AM.png"

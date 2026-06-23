@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import { sendEmail } from "@/app/actions/sendEmail";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -28,7 +29,7 @@ export default function Contact() {
     }));
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setError("");
 
@@ -40,19 +41,26 @@ export default function Contact() {
 
     setIsSubmitting(true);
 
-    // Simulate API request
-    setTimeout(() => {
+    try {
+      const result = await sendEmail(formData);
+      if (result.success) {
+        setIsSubmitted(true);
+        setFormData({
+          firstName: "",
+          lastName: "",
+          email: "",
+          phone: "",
+          serviceType: "",
+          additionalInfo: "",
+        });
+      } else {
+        setError(result.error || "Something went wrong. Please try again later.");
+      }
+    } catch (err) {
+      setError("An unexpected error occurred.");
+    } finally {
       setIsSubmitting(false);
-      setIsSubmitted(true);
-      setFormData({
-        firstName: "",
-        lastName: "",
-        email: "",
-        phone: "",
-        serviceType: "",
-        additionalInfo: "",
-      });
-    }, 1500);
+    }
   };
 
   return (
@@ -102,7 +110,7 @@ export default function Contact() {
                     value={formData.firstName}
                     onChange={handleChange}
                     className="w-full h-16 px-8 rounded-full border-[3px] border-[#0e4ee5] focus:outline-none focus:ring-4 focus:ring-brand-primary/10 text-brand-darker font-medium text-lg placeholder-gray-400 bg-white transition-smooth"
-                    placeholder="John"
+                    placeholder="Afro"
                     required
                   />
                 </div>
@@ -117,7 +125,7 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     className="w-full h-16 px-8 rounded-full border-[3px] border-[#0e4ee5] focus:outline-none focus:ring-4 focus:ring-brand-primary/10 text-brand-darker font-medium text-lg placeholder-gray-400 bg-white transition-smooth"
-                    placeholder="john@example.com"
+                    placeholder="solomon@example.com"
                     required
                   />
                 </div>
@@ -136,7 +144,7 @@ export default function Contact() {
                     value={formData.lastName}
                     onChange={handleChange}
                     className="w-full h-16 px-8 rounded-full border-[3px] border-[#0e4ee5] focus:outline-none focus:ring-4 focus:ring-brand-primary/10 text-brand-darker font-medium text-lg placeholder-gray-400 bg-white transition-smooth"
-                    placeholder="Doe"
+                    placeholder="Admiral"
                   />
                 </div>
                 <div className="flex flex-col space-y-3">
@@ -150,7 +158,7 @@ export default function Contact() {
                     value={formData.phone}
                     onChange={handleChange}
                     className="w-full h-16 px-8 rounded-full border-[3px] border-[#0e4ee5] focus:outline-none focus:ring-4 focus:ring-brand-primary/10 text-brand-darker font-medium text-lg placeholder-gray-400 bg-white transition-smooth"
-                    placeholder="+233 208 866 554"
+                    placeholder="xxx xxx xxxx"
                   />
                 </div>
               </div>

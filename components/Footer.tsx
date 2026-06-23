@@ -21,8 +21,8 @@ export default function Footer() {
             {/* Left Brand Slogan */}
             <div className="flex flex-col justify-between">
               <div>
-                <h3 className="text-2xl md:text-3xl font-bold tracking-tight max-w-[200px]">
-                  Bold African, Luxury Scent
+                <h3 className="text-xl md:text-2xl font-bold tracking-tight max-w-[300px]">
+                  Dream It, Say It, Done!
                 </h3>
               </div>
             </div>
