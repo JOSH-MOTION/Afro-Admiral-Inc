@@ -108,7 +108,7 @@ const services: ServiceItem[] = [
   },
   {
     title: "Content/Ghost Writing",
-    image: "/ghost writing done.jpg",
+    image: "/ghost writing.jpeg",
     gridSpan: "col-span-1",
     aspectRatio: "aspect-[3/4] md:aspect-square",
     description:
