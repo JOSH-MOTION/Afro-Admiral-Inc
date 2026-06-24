@@ -1,7 +1,30 @@
+import type { Metadata } from "next";
 import Image from "next/image";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import FadeIn from "@/components/FadeIn";
+
+export const metadata: Metadata = {
+  title: "Our Services",
+  description:
+    "Explore Afro Admiral Inc.'s full suite of communication services — Public Relations, Advertising, Production, Brand & Event Management, Lobby Services, Content Writing, and Corporate Liaison across Africa.",
+  alternates: {
+    canonical: "https://afroadmiral.com/services",
+  },
+  openGraph: {
+    title: "Our Services | Afro Admiral Inc.",
+    description:
+      "Explore Afro Admiral Inc.'s full suite of communication services — Public Relations, Advertising, Production, Brand & Event Management, Lobby Services, Content Writing, and Corporate Liaison across Africa.",
+    url: "https://afroadmiral.com/services",
+  },
+  twitter: {
+    title: "Our Services | Afro Admiral Inc.",
+    description:
+      "Explore Afro Admiral Inc.'s full suite of communication services — Public Relations, Advertising, Production, Brand & Event Management, Lobby Services, Content Writing, and Corporate Liaison across Africa.",
+  },
+};
+
+
 
 interface ServiceItem {
   title: string;

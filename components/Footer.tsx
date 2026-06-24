@@ -18,12 +18,20 @@ export default function Footer() {
       <div className="relative z-10 max-w-7xl mx-auto px-6">
         <div className="bg-[#0e4ee5] rounded-[2.5rem] p-10 md:p-16 text-white shadow-2xl">
           <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
-            {/* Left Brand Slogan */}
+            {/* Left Brand Logo */}
             <div className="flex flex-col justify-between">
-              <div>
-                <h3 className="text-xl md:text-2xl font-bold tracking-tight max-w-[300px]">
+              <div className="flex flex-col space-y-4">
+                <div className="relative w-48 h-16">
+                  <Image
+                    src="/horizontal white.png"
+                    alt="Afro Admiral Inc."
+                    fill
+                    className="object-contain object-left"
+                  />
+                </div>
+                <p className="text-white/70 text-sm max-w-[240px] leading-relaxed">
                   Dream It, Say It, Done!
-                </h3>
+                </p>
               </div>
             </div>
 
