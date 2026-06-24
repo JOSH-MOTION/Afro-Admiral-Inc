@@ -4,6 +4,7 @@ import Footer from "@/components/Footer";
 import AnimatedCounter from "@/components/AnimatedCounter";
 import HeroSection from "@/components/HeroSection";
 import FadeIn from "@/components/FadeIn";
+import FlipCard from "@/components/FlipCard";
 
 export default function Home() {
   return (
@@ -92,68 +93,32 @@ export default function Home() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
               {/* Mission Card */}
               <FadeIn direction="up" delay={0}>
-                <div className="bg-[white] rounded-[2rem] p-6 flex flex-col space-y-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-smooth group cursor-pointer">
-                  <div className="relative w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden">
-                    <Image
-                      src="/mission.png"
-                      alt="Our Mission"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover transition-smooth group-hover:scale-105"
-                    />
-                    {/* Hover Overlay (always visible on mobile, slide-up on desktop) */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b2984]/95 via-[#0b2984]/80 to-transparent translate-y-0 md:translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out flex flex-col justify-end p-6 rounded-[1.5rem]">
-                      <p className="text-white/90 text-sm md:text-base leading-relaxed font-normal">
-                        Our mission is to deliver creative and effective brand, PR, event, and advertising solutions that help businesses grow, build trust, and achieve their goals.
-                      </p>
-                    </div>
-                  </div>
-                  <h3 className="text-2xl font-bold tracking-tight px-2 pb-2">Our Mission</h3>
-                </div>
+                <FlipCard
+                  image="/mission.png"
+                  alt="Our Mission"
+                  title="Our Mission"
+                  description="Our mission is to deliver creative and effective brand, PR, event, and advertising solutions that help businesses grow, build trust, and achieve their goals."
+                />
               </FadeIn>
 
               {/* Vision Card */}
               <FadeIn direction="up" delay={0.15}>
-                <div className="bg-[white] rounded-[2rem] p-6 flex flex-col space-y-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-smooth group cursor-pointer">
-                  <div className="relative w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden">
-                    <Image
-                      src="/vision.png"
-                      alt="Our Vision"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover transition-smooth group-hover:scale-105"
-                    />
-                    {/* Hover Overlay (always visible on mobile, slide-up on desktop) */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b2984]/95 via-[#0b2984]/80 to-transparent translate-y-0 md:translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out flex flex-col justify-end p-6 rounded-[1.5rem]">
-                      <p className="text-white/90 text-sm md:text-base leading-relaxed font-normal">
-                        To be Africa&apos;s leading PR, brand management, event production, and advertising agency, known for creating innovative solutions that help brands connect and grow.
-                      </p>
-                    </div>
-                  </div>
-                  <h3 className="text-2xl font-bold tracking-tight px-2 pb-2">Our Vision</h3>
-                </div>
+                <FlipCard
+                  image="/vision.png"
+                  alt="Our Vision"
+                  title="Our Vision"
+                  description="To be Africa's leading PR, brand management, event production, and advertising agency, known for creating innovative solutions that help brands connect and grow."
+                />
               </FadeIn>
 
               {/* Core Values Card */}
               <FadeIn direction="up" delay={0.3}>
-                <div className="bg-[white] rounded-[2rem] p-6 flex flex-col space-y-6 shadow-xl hover:shadow-2xl hover:-translate-y-2 transition-smooth group cursor-pointer">
-                  <div className="relative w-full aspect-[4/5] rounded-[1.5rem] overflow-hidden">
-                    <Image
-                      src="/ChatGPT Image May 1, 2026, 03_18_50 AM.png"
-                      alt="Core Values"
-                      fill
-                      sizes="(max-width: 768px) 100vw, 33vw"
-                      className="object-cover transition-smooth group-hover:scale-105"
-                    />
-                    {/* Hover Overlay (always visible on mobile, slide-up on desktop) */}
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0b2984]/95 via-[#0b2984]/80 to-transparent translate-y-0 md:translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out flex flex-col justify-end p-6 rounded-[1.5rem]">
-                      <p className="text-white/90 text-sm md:text-base leading-relaxed font-normal">
-                        Integrity, Creativity, Excellence, Innovation, Teamwork, and Commitment. These values guide everything we do and drive us to deliver outstanding results for our clients.
-                      </p>
-                    </div>
-                  </div>
-                  <h3 className="text-2xl font-bold tracking-tight px-2 pb-2">Core Values</h3>
-                </div>
+                <FlipCard
+                  image="/ChatGPT Image May 1, 2026, 03_18_50 AM.png"
+                  alt="Core Values"
+                  title="Core Values"
+                  description="Integrity, Creativity, Excellence, Innovation, Teamwork, and Commitment. These values guide everything we do and drive us to deliver outstanding results for our clients."
+                />
               </FadeIn>
             </div>
           </div>

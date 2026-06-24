@@ -106,7 +106,7 @@ export default function Contact() {
                 </div>
               )}
 
-              {/* Row 1: First Name & Email */}
+              {/* Row 1: First Name & Last Name */}
               <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
                 <div className="flex flex-col space-y-3">
                   <label htmlFor="firstName" className="text-xl md:text-2xl font-bold text-[#0a2d8f] pl-1">
@@ -124,6 +124,24 @@ export default function Contact() {
                   />
                 </div>
                 <div className="flex flex-col space-y-3">
+                  <label htmlFor="lastName" className="text-xl md:text-2xl font-bold text-[#0a2d8f] pl-1">
+                    Last Name
+                  </label>
+                  <input
+                    type="text"
+                    id="lastName"
+                    name="lastName"
+                    value={formData.lastName}
+                    onChange={handleChange}
+                    className="w-full h-16 px-8 rounded-full border-[3px] border-[#0e4ee5] focus:outline-none focus:ring-4 focus:ring-brand-primary/10 text-brand-darker font-medium text-lg placeholder-gray-400 bg-white transition-smooth"
+                    placeholder="Admiral"
+                  />
+                </div>
+              </div>
+
+              {/* Row 2: Email & Telephone Number */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
+                <div className="flex flex-col space-y-3">
                   <label htmlFor="email" className="text-xl md:text-2xl font-bold text-[#0a2d8f] pl-1">
                     Email <span className="text-red-500">*</span>
                   </label>
@@ -136,24 +154,6 @@ export default function Contact() {
                     className="w-full h-16 px-8 rounded-full border-[3px] border-[#0e4ee5] focus:outline-none focus:ring-4 focus:ring-brand-primary/10 text-brand-darker font-medium text-lg placeholder-gray-400 bg-white transition-smooth"
                     placeholder="solomon@example.com"
                     required
-                  />
-                </div>
-              </div>
-
-              {/* Row 2: Last Name & Telephone Number */}
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-                <div className="flex flex-col space-y-3">
-                  <label htmlFor="lastName" className="text-xl md:text-2xl font-bold text-[#0a2d8f] pl-1">
-                    Last Name
-                  </label>
-                  <input
-                    type="text"
-                    id="lastName"
-                    name="lastName"
-                    value={formData.lastName}
-                    onChange={handleChange}
-                    className="w-full h-16 px-8 rounded-full border-[3px] border-[#0e4ee5] focus:outline-none focus:ring-4 focus:ring-brand-primary/10 text-brand-darker font-medium text-lg placeholder-gray-400 bg-white transition-smooth"
-                    placeholder="Admiral"
                   />
                 </div>
                 <div className="flex flex-col space-y-3">
