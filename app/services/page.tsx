@@ -8,6 +8,21 @@ export const metadata: Metadata = {
   title: "Our Services",
   description:
     "Explore Afro Admiral Inc.'s full suite of communication services — Public Relations, Advertising, Production, Brand & Event Management, Lobby Services, Content Writing, and Corporate Liaison across Africa.",
+  keywords: [
+    "PR Services Ghana",
+    "Advertising Services Accra",
+    "Brand Management Services Africa",
+    "Event Production Services Ghana",
+    "Ghost Writing Services Ghana",
+    "Content Writing Services Africa",
+    "Corporate Liaison Services Ghana",
+    "Lobby Services Ghana",
+    "Media Production Services Accra",
+    "Public Relations Services West Africa",
+    "Integrated Communication Services Ghana",
+    "Event Management Services Accra",
+    "Afro Admiral Services",
+  ],
   alternates: {
     canonical: "https://afroadmiral.com/services",
   },
