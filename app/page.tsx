@@ -39,7 +39,7 @@ export default function Home() {
                   <p className="text-3xl md:text-6xl font-extrabold text-brand-primary tracking-tight">
                     <AnimatedCounter target={9} suffix="+" />
                   </p>
-                  <p className="mt-1 md:mt-2 text-[10px] md:text-sm font-semibold text-brand-darker uppercase tracking-wider leading-tight">Leads and Prospective Projects</p>
+                  <p className="mt-1 md:mt-2 text-[10px] md:text-sm font-semibold text-brand-darker tracking-wider leading-tight">Leads and Prospective Projects</p>
                 </div>
               </div>
             </div>
