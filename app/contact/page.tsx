@@ -4,6 +4,7 @@ import { useState } from "react";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { sendEmail } from "@/app/actions/sendEmail";
+import FadeIn from "@/components/FadeIn";
 
 export default function Contact() {
   const [formData, setFormData] = useState({
@@ -71,6 +72,14 @@ export default function Contact() {
       {/* Main Content */}
       <main className="flex-grow py-12 md:py-20">
         <div className="max-w-4xl mx-auto px-6">
+          <FadeIn direction="up" delay={0} className="mb-10">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-brand-primary tracking-tight">Get In Touch</h1>
+            <p className="mt-3 text-base md:text-lg text-brand-darker/70">
+              Tell us about your project and we&apos;ll get back to you shortly.
+            </p>
+          </FadeIn>
+
+          <FadeIn direction="up" delay={0.15}>
           {isSubmitted ? (
             /* Success State */
             <div className="bg-[#f0f5ff] border-2 border-brand-primary rounded-[2.5rem] p-12 text-center my-12 animate-in fade-in zoom-in-95 duration-300">
@@ -232,6 +241,7 @@ export default function Contact() {
               </div>
             </form>
           )}
+          </FadeIn>
         </div>
       </main>
 

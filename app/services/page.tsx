@@ -1,7 +1,7 @@
 import Image from "next/image";
-import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import FadeIn from "@/components/FadeIn";
 
 interface ServiceItem {
   title: string;
@@ -72,38 +72,49 @@ export default function Services() {
       {/* Main Grid Content */}
       <main className="flex-grow py-12 md:py-20">
         <div className="max-w-7xl mx-auto px-6">
+          <FadeIn direction="up" delay={0} className="mb-12">
+            <h1 className="text-4xl md:text-5xl font-extrabold text-brand-primary tracking-tight">Our Services</h1>
+            <p className="mt-3 text-base md:text-lg text-brand-darker/70 max-w-xl">
+              Everything your brand needs to grow, connect, and lead.
+            </p>
+          </FadeIn>
+
           <div className="grid grid-cols-1 md:grid-cols-3 gap-x-8 gap-y-12">
             {services.map((service, index) => (
-              <div
+              <FadeIn
                 key={index}
-                className={`${service.gridSpan} flex flex-col space-y-4 hover:-translate-y-2 transition-smooth group cursor-pointer`}
+                direction="up"
+                delay={Math.min(index * 0.1, 0.4)}
+                className={service.gridSpan}
               >
-                {/* Service Image Card */}
-                <div
-                  className={`relative w-full ${service.aspectRatio} rounded-[2rem] overflow-hidden shadow-lg group-hover:shadow-xl transition-smooth`}
-                >
-                  <Image
-                    src={service.image}
-                    alt={service.title}
-                    fill
-                    className="object-cover transition-smooth group-hover:scale-105"
-                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                  />
-                  {/* Hover Overlay */}
-                  <div className="absolute inset-0 bg-gradient-to-t from-[#0e4ee5]/95 via-[#0e4ee5]/80 to-transparent translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out flex flex-col justify-end p-8 rounded-[2rem]">
-                    <p className="text-white/95 text-base md:text-lg leading-relaxed font-medium">
-                      {service.description}
-                    </p>
+                <div className="flex flex-col space-y-4 hover:-translate-y-2 transition-smooth group cursor-pointer h-full">
+                  {/* Service Image Card */}
+                  <div
+                    className={`relative w-full ${service.aspectRatio} rounded-[2rem] overflow-hidden shadow-lg group-hover:shadow-xl transition-smooth`}
+                  >
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      fill
+                      className="object-cover transition-smooth group-hover:scale-105"
+                      sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    />
+                    {/* Hover Overlay — always visible on mobile */}
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0e4ee5]/95 via-[#0e4ee5]/80 to-transparent translate-y-0 md:translate-y-full group-hover:translate-y-0 transition-transform duration-500 ease-in-out flex flex-col justify-end p-8 rounded-[2rem]">
+                      <p className="text-white/95 text-base md:text-lg leading-relaxed font-medium">
+                        {service.description}
+                      </p>
+                    </div>
+                  </div>
+
+                  {/* Service Title */}
+                  <div className="pl-2">
+                    <h2 className="text-2xl md:text-3xl font-extrabold text-[#0e4ee5] tracking-tight group-hover:text-brand-dark transition-smooth">
+                      {service.title}
+                    </h2>
                   </div>
                 </div>
-
-                {/* Service Title */}
-                <div className="pl-2">
-                  <h2 className="text-2xl md:text-3xl font-extrabold text-[#0e4ee5] tracking-tight group-hover:text-brand-dark transition-smooth">
-                    {service.title}
-                  </h2>
-                </div>
-              </div>
+              </FadeIn>
             ))}
           </div>
         </div>
