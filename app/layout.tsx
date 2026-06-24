@@ -42,6 +42,9 @@ export const metadata: Metadata = {
   authors: [{ name: "Afro Admiral Inc.", url: BASE_URL }],
   creator: "Afro Admiral Inc.",
   publisher: "Afro Admiral Inc.",
+  verification: {
+    google: "HMCrTCz46VJfBvDcn1cEUBq2J6_9mjv-HjeQpspuUU4",
+  },
   robots: {
     index: true,
     follow: true,
@@ -71,7 +74,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/og-image.jpg",
+        url: "/og-image.jpeg",
         width: 1200,
         height: 630,
         alt: "Afro Admiral Inc. — Dream It, Say It, Done!",
@@ -85,7 +88,7 @@ export const metadata: Metadata = {
     title: "Afro Admiral Inc. — Dream It, Say It, Done!",
     description:
       "AFRO ADMIRAL INC is an all-round communication ecosystem delivering Brand Management, Marketing, PR, Event Production, Content Development, and Corporate Liaison services across Africa.",
-    images: ["/og-image.jpg"],
+    images: ["/og-image.jpeg"],
   },
   category: "business",
 };
