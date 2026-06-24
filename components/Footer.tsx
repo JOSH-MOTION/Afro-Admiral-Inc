@@ -38,7 +38,7 @@ export default function Footer() {
                 </li>
                 <li>
                   <Link href="/#about" className="text-white/70 hover:text-white hover:underline transition-smooth text-sm">
-                    Vission
+                    Vision
                   </Link>
                 </li>
                 <li>
