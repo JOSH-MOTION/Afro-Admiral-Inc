@@ -25,21 +25,21 @@ export default function Home() {
                   <p className="text-3xl md:text-6xl font-extrabold text-brand-primary tracking-tight">
                     <AnimatedCounter target={4} />
                   </p>
-                  <p className="mt-1 md:mt-2 text-[10px] md:text-sm font-semibold text-brand-darker tracking-wider leading-tight">Completed Projects</p>
+                  <p className="mt-1 md:mt-2 text-[10px] md:text-sm font-semibold text-brand-darker tracking-wider leading-tight">Completed <br /> Projects</p>
                 </div>
                 {/* Stat 2 */}
                 <div className="py-3 md:py-0 px-2">
                   <p className="text-3xl md:text-6xl font-extrabold text-brand-primary tracking-tight">
                     <AnimatedCounter target={6} />
                   </p>
-                  <p className="mt-1 md:mt-2 text-[10px] md:text-sm font-semibold text-brand-darker  tracking-wider leading-tight">Projects in Pipeline</p>
+                  <p className="mt-1 md:mt-2 text-[10px] md:text-sm font-semibold text-brand-darker  tracking-wider leading-tight">Projects in <br /> Pipeline</p>
                 </div>
                 {/* Stat 3 */}
                 <div className="py-3 md:py-0 px-2">
                   <p className="text-3xl md:text-6xl font-extrabold text-brand-primary tracking-tight">
                     <AnimatedCounter target={9} suffix="+" />
                   </p>
-                  <p className="mt-1 md:mt-2 text-[10px] md:text-sm font-semibold text-brand-darker tracking-wider leading-tight">Leads and Prospective Projects</p>
+                  <p className="mt-1 md:mt-2 text-[10px] md:text-sm font-semibold text-brand-darker tracking-wider leading-tight">Leads and <br /> Prospective Projects</p>
                 </div>
               </div>
             </div>
