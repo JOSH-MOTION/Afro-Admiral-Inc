@@ -92,7 +92,7 @@ export default function Footer() {
               <h4 className="text-lg font-semibold mb-6 text-white/90">Socials</h4>
               <ul className="space-y-4 text-sm text-white/70">
                 <li>
-                  <a href="https://instagram.com" target="_blank" rel="noreferrer" className="hover:text-white transition-smooth">
+                  <a href="https://www.instagram.com/afroadmiral?igsh=OXpxaHlvYWlxOWNr&utm_source=qr" target="_blank" rel="noreferrer" className="hover:text-white transition-smooth">
                     Instagram
                   </a>
                 </li>
@@ -102,7 +102,7 @@ export default function Footer() {
                   </a>
                 </li>
                 <li>
-                  <a href="https://facebook.com" target="_blank" rel="noreferrer" className="hover:text-white transition-smooth">
+                  <a href="https://www.facebook.com/share/1JDpH41mWU/?mibextid=wwXIfr" target="_blank" rel="noreferrer" className="hover:text-white transition-smooth">
                     Facebook
                   </a>
                 </li>
